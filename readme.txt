@@ -1,32 +1,32 @@
-Сервер создавался по аналогии c:
+РЎРµСЂРІРµСЂ СЃРѕР·РґР°РІР°Р»СЃСЏ РїРѕ Р°РЅР°Р»РѕРіРёРё c:
 http://www.delphisite.ru/faq/sozdanie-com-servera
 
 
-Регистрация и снятие регистрации Dll в системе
+Р РµРіРёСЃС‚СЂР°С†РёСЏ Рё СЃРЅСЏС‚РёРµ СЂРµРіРёСЃС‚СЂР°С†РёРё Dll РІ СЃРёСЃС‚РµРјРµ
 https://ab57.ru/cmdlist/regsvr32.html
 
 
-Смена "непонятного" заголовка "Embarcadero.DesktopToasts.*" 
+РЎРјРµРЅР° "РЅРµРїРѕРЅСЏС‚РЅРѕРіРѕ" Р·Р°РіРѕР»РѕРІРєР° "Embarcadero.DesktopToasts.*" 
 
-на мысль натолкнула статья 
+РЅР° РјС‹СЃР»СЊ РЅР°С‚РѕР»РєРЅСѓР»Р° СЃС‚Р°С‚СЊСЏ 
 https://www.board4all.biz/threads/notifications-on-windows-10.713436/
 
-сама маска заголовка прописан в System.Win.Notification
-для его смены для проета, необходимо переместить файл этот файл 
-в папку с проектом и заменить константу на необходимую.
+СЃР°РјР° РјР°СЃРєР° Р·Р°РіРѕР»РѕРІРєР° РїСЂРѕРїРёСЃР°РЅ РІ System.Win.Notification
+РґР»СЏ РµРіРѕ СЃРјРµРЅС‹ РґР»СЏ РїСЂРѕРµС‚Р°, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРјРµСЃС‚РёС‚СЊ С„Р°Р№Р» СЌС‚РѕС‚ С„Р°Р№Р» 
+РІ РїР°РїРєСѓ СЃ РїСЂРѕРµРєС‚РѕРј Рё Р·Р°РјРµРЅРёС‚СЊ РєРѕРЅСЃС‚Р°РЅС‚Сѓ РЅР° РЅРµРѕР±С…РѕРґРёРјСѓСЋ.
 
 ---
-Для регистрации DLL необходимо запустить source\d10\dll\Win32\Debug\register.bat 
-с правами администратора.
+Р”Р»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё DLL РЅРµРѕР±С…РѕРґРёРјРѕ Р·Р°РїСѓСЃС‚РёС‚СЊ source\d10\dll\Win32\Debug\register.bat 
+СЃ РїСЂР°РІР°РјРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°.
 
-Для использованиия dll необходим смотрим пример source\d5\
-или вкратце: source\d5\NotificationToastExport_TLB.pas (он такой же как и в 
-source\d10\dll\NotificationToastExport_TLB.pas) только используются "старые" 
-модули в uses.
+Р”Р»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРёСЏ dll РЅРµРѕР±С…РѕРґРёРј СЃРјРѕС‚СЂРёРј РїСЂРёРјРµСЂ source\d5\
+РёР»Рё РІРєСЂР°С‚С†Рµ: source\d5\NotificationToastExport_TLB.pas (РѕРЅ С‚Р°РєРѕР№ Р¶Рµ РєР°Рє Рё РІ 
+source\d10\dll\NotificationToastExport_TLB.pas) С‚РѕР»СЊРєРѕ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ "СЃС‚Р°СЂС‹Рµ" 
+РјРѕРґСѓР»Рё РІ uses.
 
-1. в uses добаляем ComObj, NotificationToastExport_TLB
-2. в var модуля опишем NotificationToast: INotificationToast
-3. в обработчике кнопки примерно такой код:
+1. РІ uses РґРѕР±Р°Р»СЏРµРј ComObj, NotificationToastExport_TLB
+2. РІ var РјРѕРґСѓР»СЏ РѕРїРёС€РµРј NotificationToast: INotificationToast
+3. РІ РѕР±СЂР°Р±РѕС‚С‡РёРєРµ РєРЅРѕРїРєРё РїСЂРёРјРµСЂРЅРѕ С‚Р°РєРѕР№ РєРѕРґ:
 
   if Assigned(NotificationToast) then
   begin
@@ -40,4 +40,3 @@ source\d10\dll\NotificationToastExport_TLB.pas) только используются "старые"
       NotificationToast.Show(ed1.Text)
     end
   end; 
-
