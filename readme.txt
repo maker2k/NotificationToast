@@ -19,7 +19,7 @@ https://www.board4all.biz/threads/notifications-on-windows-10.713436/
 Для регистрации DLL необходимо запустить source\d10\dll\Win32\Debug\register.bat 
 с правами администратора.
 
-Для использованиия dll необходим смотрим пример source\d5\
+Для использованиия dll смотрим пример source\d5\
 или вкратце: source\d5\NotificationToastExport_TLB.pas (он такой же как и в 
 source\d10\dll\NotificationToastExport_TLB.pas) только используются "старые" 
 модули в uses.
