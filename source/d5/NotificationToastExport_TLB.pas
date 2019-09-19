@@ -36,7 +36,6 @@ interface
 //uses Vcl.OleCtrls, Winapi.ActiveX;
 uses OleCtrls, ActiveX;
 
-
 // *********************************************************************//
 // GUIDS declared in the TypeLibrary. Following prefixes are used:
 //   Type Libraries     : LIBID_xxxx
@@ -53,8 +52,8 @@ const
 
   IID_INotificationToast: TGUID = '{3ADF7763-9F0E-45B6-AC12-702C6C04B4E9}';
   CLASS_NotificationToast: TGUID = '{4219D790-B1CF-4BA3-A3C9-7A8C0784BFAD}';
-type
 
+type
 // *********************************************************************//
 // Forward declaration of types defined in TypeLibrary
 // *********************************************************************//

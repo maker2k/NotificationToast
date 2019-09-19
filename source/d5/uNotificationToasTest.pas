@@ -10,7 +10,9 @@ type
   TFmNotificationToastTest = class(TForm)
     ed1: TEdit;
     btn1: TButton;
+    btn2: TButton;
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,6 +22,9 @@ type
 var
   FmNotificationToastTest: TFmNotificationToastTest;
   NotificationToast: INotificationToast;
+
+// вариант для dll-simple
+function ShowNotificationToast(const title, msg: WideString): HResult; external 'd:\myProj\NotificationToast\source\d10\dll-simple\Win32\Debug\NotificationToastDll.dll'
 
 implementation
 
@@ -39,6 +44,11 @@ begin
       NotificationToast.Show(ed1.Text)
     end
   end;
+end;
+
+procedure TFmNotificationToastTest.btn2Click(Sender: TObject);
+begin
+  ShowNotificationToast('title', ed1.text);
 end;
 
 end.

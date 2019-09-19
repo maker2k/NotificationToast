@@ -34,7 +34,7 @@ interface
 
 // автосгенерированные библиотеки,
 //uses Winapi.Windows, System.Classes, System.Variants, System.Win.StdVCL, Vcl.Graphics, Vcl.OleServer, Winapi.ActiveX;
-uses Vcl.OleCtrls, Winapi.ActiveX;
+uses  Winapi.ActiveX;
 
 
 // *********************************************************************//

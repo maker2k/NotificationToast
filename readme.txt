@@ -1,5 +1,7 @@
 Сервер создавался по аналогии c:
 http://www.delphisite.ru/faq/sozdanie-com-servera
+в теории, можно и так (dll-simple):
+http://delphiru.ru/resources/26-creating-and-using-dll-from-delphi
 
 
 Регистрация и снятие регистрации Dll в системе
