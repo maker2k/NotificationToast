@@ -42,3 +42,8 @@ source\d10\dll\NotificationToastExport_TLB.pas) только использую�
       NotificationToast.Show(ed1.Text)
     end
   end; 
+
+в реализация варианта #2 (dll-simple)
+1: подключаем функцию из dll
+function ShowNotificationToast(const title, msg: WideString): HResult; external '\source\d10\dll-simple\Win32\Debug\NotificationToastDll.dll'
+2: и используем ShowNotificationToast('title', ed1.text);
