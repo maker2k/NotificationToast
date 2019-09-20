@@ -47,3 +47,5 @@ source\d10\dll\NotificationToastExport_TLB.pas) только использую�
 1: подключаем функцию из dll
 function ShowNotificationToast(const title, msg: WideString): HResult; external '\source\d10\dll-simple\Win32\Debug\NotificationToastDll.dll'
 2: и используем ShowNotificationToast('title', ed1.text);
+
+Альтернативный пример варианта уведомлений с полной поддержкой шаблонов XML в '\source\d10ConsoleNotifier\'
